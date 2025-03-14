@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+</head>
+<body>
+    <center>
+        <h1>Jogo Da Adivinhação:</h1>
+        <script>
+            let numeropensado = Math.floor(Math.random()*10 + 1);
+
+            for(tentativa = 1; tentativa <= 3; tentativa++){
+                let chute = prompt("Adivinhe um número de 1 a 10");
+                if(chute == numeropensado){
+                    alert("Parabéns, você acertou!");
+                    break;
+                }else{
+                    alert("Você errou! Você tem mais " + (3 - tentativa) + " tentativas.");
+
+                    if (tentativa == 3){
+                        document.write("Eu tinha pensado " + numeropensado + "<br>");
+                    }
+                }
+            }
+
+            let denovo = prompt("quer jogar denovo? (sim ou não).");
+            if(denovo == "sim"){
+                location.reload();
+            }
+            else if (denovo == "não"){
+                alert("Que pena, te vejo na próxima");
+            }
+            else{
+                alert("Resposta invalida! vai jogar de novo!")
+                location.reload();
+            }
+            
+                
+            
+        </script>
+    </center>
+</body>
+</html>
