@@ -9,7 +9,9 @@
     <center>
         <h1>Jogo Da Adivinhação:</h1>
         <script>
-            let numeropensado = Math.floor(Math.random()*10 + 1);
+           
+
+                let numeropensado = Math.floor(Math.random()*10 + 1);
 
             for(tentativa = 1; tentativa <= 3; tentativa++){
                 let chute = prompt("Adivinhe um número de 1 a 10");
@@ -25,11 +27,14 @@
                 }
             }
 
-            let denovo = prompt("quer jogar denovo? (sim ou não).");
-            if(denovo == "sim"){
+
+            
+
+            let denovo = prompt("Digite 1 para recomeçar e 2 para encerrar.");
+            if(denovo == "1"){
                 location.reload();
             }
-            else if (denovo == "não"){
+            else if (denovo == "2"){
                 alert("Que pena, te vejo na próxima");
             }
             else{
